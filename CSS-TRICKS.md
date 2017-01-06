@@ -1,6 +1,6 @@
 ## XMAS Lights
 
-#### css
+###### css
 ```css
 #wire{
 text-align: center;
@@ -74,7 +74,7 @@ height: 100px;
   }
 }
 ```
-#### html
+##### html
 ```html
   <ul  id="wire">
         <li></li>
@@ -90,4 +90,18 @@ height: 100px;
         <li></li>
         <li></li>
       </ul>
+```
+
+## Sound effects 
+```javascript
+  function playPause(x) {
+            var myAudio=document.getElementById(x);
+            myAudio.currentTime=0;
+            myAudio.play();
+       }
+```
+
+```html
+<audio id="click_04.wav"><source src="/css/sounds/click_04.wav"></audio>
+<button class="square width-fixed" onmousedown="playPause('click_04.wav')">click_04</button>
 ```
