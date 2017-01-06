@@ -15,8 +15,8 @@
 ## Проблемы деплоя с Laravel
 ##### В общем config/app.php и не только он, черпает инфу из .env
 так как в проекте есть **.gitignore** и в него прописан **.env**, проект перестает работать нормально, нужно либо информацию забрать из этого файла и подописывать в файлы  **config/ app.php, ....** либо же просто убрать из игнора.
-1. Forbiden при открытии начальной страницы: исправить можно так - создать Procfile: **web: vendor/bin/heroku-php-apache2 public/**
-2. Если есть ошибка, но не видно какая - надо поставить true в файле config/app.php ('debug' => env('APP_DEBUG', false->true),)
+* Forbiden при открытии начальной страницы: исправить можно так - создать Procfile: **web: vendor/bin/heroku-php-apache2 public/**
+* Если есть ошибка, но не видно какая - надо поставить true в файле config/app.php ('debug' => env('APP_DEBUG', false->true),)
 
 
 
