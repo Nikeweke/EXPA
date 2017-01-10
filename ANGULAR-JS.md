@@ -109,4 +109,19 @@ app.controller('two', ['$scope', '$rootScope'
 ]);
 ```
 
+## Как вытащить информацию которая пришла из секции $http 
+```js
+// Делаем функцию
+function GetSomething()
+ {
+  $http.get('/data/cart').success(function(data){
+                  ..
+       // возвращаем значения в Callbacke
+      callback(data);
+  });
+  }
 
+// Вызываем её
+GetSomething(function(data){  console.log(data);  })
+  
+```
