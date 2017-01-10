@@ -87,4 +87,26 @@ app.controller("Lists", function($scope, $http)
 ```
 
 
+## $EMIT and $ON
+```js
+app.controller('One', ['$scope', '$rootScope'
+    function($scope) {
+        $rootScope.$on("CallParentMethod", function(){
+           $scope.parentmethod();
+        });
+
+        $scope.parentmethod = function() {
+            // task
+        }
+    }
+]);
+app.controller('two', ['$scope', '$rootScope'
+    function($scope) {
+        $scope.childmethod = function() {
+            $rootScope.$emit("CallParentMethod", {});
+        }
+    }
+]);
+```
+
 
