@@ -14,11 +14,11 @@ npm i webpack -g
 --- 
 ##### Оглавление
 
-* [Собирам JS в один файл (Bundling JS)](Собирам-JS-в-один-файл-bundling-JS)
-* [Webpack.config.js](webpack.config.js)
-* [Babel-loader](babel-loader-es2015)
-* [CSS-loader & Style-loader](cSS-loader-style-loader)
-* [SASS-loader](sass-loader)
+* [Собирам JS в один файл (Bundling JS)](#Собирам-JS-в-один-файл-bundling-JS)
+* [Webpack.config.js](#webpackconfigjs)
+* [Babel-loader](#babel-loader-es2015)
+* [CSS-loader & Style-loader](#css-loader-style-loader)
+* [SASS-loader](#sass-loader)
 
 
 ---
