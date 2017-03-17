@@ -14,16 +14,16 @@ npm i webpack -g
 --- 
 ##### Оглавление
 
-* [Собирам JS в один файл (Bundling JS)]()
-* [Webpack.config.js]()
-* [Babel]()
-* [CSS]()
-* [SASS]()
+* [Собирам JS в один файл (Bundling JS)](Собирам-JS-в-один-файл-bundling-JS)
+* [Webpack.config.js](webpack.config.js)
+* [Babel-loader](Babel-loader)
+* [CSS-loader & Style-loader](CSS-loader & Style-loader)
+* [SASS-loader](SASS-loader)
 
 
 ---
 
-#### Собирам JS в один файл (Bundling JS)
+### Собирам JS в один файл (Bundling JS)
 
 Создаем 2 скрипта и страницу для теста. Синтаксис в скриптах как в NodeJS.
 
@@ -61,7 +61,7 @@ cmd> webpack ./script.js ./bundle.js
 
 --- 
 
-#### Webpack.config.js
+### Webpack.config.js
 Нужен для сборки всего и вся одной коммандой:
 ```
 webpack
@@ -86,7 +86,7 @@ output: {
 
 --- 
 
-#### Babel компилер (ES2015)
+### Babel компилер (ES2015)
 Установим пре-процессоры для компила EcmaScripts 
 ```
 npm i babel-core babel-loade babel-preset-es2015 --save-dev
@@ -127,7 +127,7 @@ cmd> webpack
 
 --- 
 
-#### CSS-loader & Style-loader
+### CSS-loader & Style-loader
 Установка
 ```
 npm i style-loader css-loader --save-dev
@@ -162,7 +162,7 @@ cmd> webpack
 
 ---
 
-#### SASS-loader
+### SASS-loader
 Установка
 ```
 npm i node-sass sass-loader --save-dev
