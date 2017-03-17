@@ -16,9 +16,9 @@ npm i webpack -g
 
 * [Собирам JS в один файл (Bundling JS)](Собирам-JS-в-один-файл-bundling-JS)
 * [Webpack.config.js](webpack.config.js)
-* [Babel-loader](Babel-loader)
-* [CSS-loader & Style-loader](CSS-loader & Style-loader)
-* [SASS-loader](SASS-loader)
+* [Babel-loader](babel-loader-es2015)
+* [CSS-loader & Style-loader](cSS-loader-style-loader)
+* [SASS-loader](sass-loader)
 
 
 ---
@@ -86,7 +86,7 @@ output: {
 
 --- 
 
-### Babel компилер (ES2015)
+### Babel-loader (ES2015)
 Установим пре-процессоры для компила EcmaScripts 
 ```
 npm i babel-core babel-loade babel-preset-es2015 --save-dev
