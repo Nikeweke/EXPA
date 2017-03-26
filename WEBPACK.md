@@ -11,6 +11,11 @@ npm init
 npm i webpack -g
 ```
 
+#### Как подключить в Bundle Jquery и прочие пакеты 
+
+* **Jquery** - `npm install jquery --save`;   `var $ = require('jquery');` 
+* **JQ Validate** - `npm install jquery-validate --save`;   `require('jquery-validate');` 
+
 --- 
 ##### Оглавление
 
