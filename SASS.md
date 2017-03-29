@@ -105,3 +105,27 @@ h3 {
 }
 
 ```
+
+### @Content
+```scss
+// Mixin
+@mixin mQ-max($px){
+	  @media (max-width: $px) {
+		  @content;
+	  }
+}
+
+//Using
+@include mQ-max(768px){
+  .btn-scr{
+     font-size: 1.1vw;
+     margin-left: -40px;
+  }
+}
+
+// Out
+@media (max-width: 768px) {
+  .btn-scr {
+    font-size: 1.1vw;
+    margin-left: -40px; } }
+```
