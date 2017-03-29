@@ -74,6 +74,7 @@ webpack
 
 ###### webpack.config.js
 ```js
+var webpack = require("webpack"); // need be installed in project 
 module.exports = {
 
 // входная точка
@@ -85,6 +86,11 @@ output: {
            path: "assets",
            filename: "bundle.js"
         }
+        
+// minify bundle        
+plugins: [
+           new webpack.optimize.UglifyJsPlugin({minimize: true})
+         ]        
 };
 
 ```
