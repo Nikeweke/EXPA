@@ -24,6 +24,7 @@ npm i webpack -g
 * [Babel-loader](#babel-loader-es2015)
 * [CSS-loader & Style-loader](#css-loader-style-loader)
 * [SASS-loader](#sass-loader)
+* [Jquery include](#jquery)
 
 
 ---
@@ -199,6 +200,14 @@ require('./css/ma-styles.scss');
 ```
 ```
 cmd> webpack
+```
+
+### Jquery include
+###### entry.js
+```
+var $ = require("jquery");
+window.jQuery = $;
+window.$ = $;
 ```
 
 
