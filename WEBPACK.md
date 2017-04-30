@@ -75,6 +75,8 @@ webpack
 ###### webpack.config.js
 ```js
 var webpack = require("webpack"); // need be installed in project 
+var path = require('path');
+
 module.exports = {
 
 // входная точка
@@ -83,7 +85,7 @@ entry: './src/script.js',
 
 // куда складывать собранные файлы
 output: {
-           path: "assets",
+           path: path.resolve('./src/findjob/public/js/fns/'),
            filename: "bundle.js"
         }
         
