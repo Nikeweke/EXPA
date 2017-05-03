@@ -9,6 +9,7 @@
 * [JQ Validate](https://jqueryvalidation.org/validate/)
 * [Bootstrap-slider](http://seiyria.com/bootstrap-slider/)
 * [PNotify](http://sciactive.com/pnotify/#demos-simple)
+* [DEv-TOnes](http://rcptones.com/dev_tones/)
 
 ### Useful tools for web
 * [RethinkDB Admin(REQLPRO)](http://reqlpro.com/#downloads)
