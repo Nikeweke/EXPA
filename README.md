@@ -1,3 +1,9 @@
+### Useful links
+* [Pastebin](https://pastebin.com/)
+* [Schema DB Designer](http://dbdesigner.net/designer)
+* [WEB-books](http://webbooks.com.ua/books-main/dizajn/)
+
+
 ### Useful plugins for web
 * [Flexdatalist](http://projects.sergiodinislopes.pt/flexdatalist/)
 * [JQ Validate](https://jqueryvalidation.org/validate/)
