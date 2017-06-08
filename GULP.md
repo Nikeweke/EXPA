@@ -1,5 +1,9 @@
 # Gulp 
 
+* Для использования надо установить gulp глобально (npm i gulp -g)
+* Файл назвать **gulpfile.js**
+
+
 ### Собрать *Sass* (комманды в консоли - `gulp sass`, `gulp sass:watch`
 ```js
 'use strict';
