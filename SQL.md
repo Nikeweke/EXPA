@@ -1,8 +1,7 @@
 
 
-# SQL - REQUESTS
+## СОЗДАНИЕ ПРОЦЕДУР
 ```sql
-.............................................................................-> СОЗДАНИЕ ПРОЦЕДУР
 /************************************************************
 *   Вызов процедуры в php
 *
@@ -147,10 +146,10 @@ END //
 !!! USING : $query = $db->query("CALL selecter(1,$current_user,0)");
         бЕЗ КАВЫЧЕК
 
-.............................................................................-> СОЗДАНИЕ ПРОЦЕДУР
+```
 
-
-.............................................................................-> СОЗДАНИЕ ТРИГЕРА
+## СОЗДАНИЕ ТРИГЕРА
+```sql
 /************************************************************
 *  Триггер с 1 коммандой
 *
@@ -172,20 +171,53 @@ BEGIN
 INSERT INTO log Set action = 'delete in employees';
 DELETE FROM kod WHERE kod.id = OLD.id;
 END //
-.............................................................................-> СОЗДАНИЕ ТРИГЕРА
 
 
-.............................................................................-> УДАЛЕНИЕ 1 записи из БД
 /************************************************************
 *  Удаление первой записи
 *
 ***********************************************************/
 DELETE FROM trigga LIMIT 1
-.............................................................................-> УДАЛЕНИЕ 1 записи из БД
 
 
 
-.............................................................................-> СОЗДАНИЕ ТАБЛИЦ
+/************************************************************
+*  Триггер с IF clause
+*
+***********************************************************/
+DELIMITER $$
+CREATE TRIGGER `likes_recounter` AFTER INSERT ON `likes` FOR EACH ROW BEGIN
+
+  DECLARE likes_count integer;
+  
+ IF NEW.article_id <> 0 THEN BEGIN
+    -- INSERT INTO logs (table_name, user) VALUES(NEW.article_id, 'here');
+    SET @likes_count := (SELECT count(*) FROM likes WHERE article_id = NEW.article_id);
+    UPDATE articles SET likes = @likes_count WHERE articles.id = NEW.article_id;
+  END;  END IF;
+  
+ IF NEW.answer_id <> 0 THEN BEGIN
+    -- INSERT INTO logs (table_name, user) VALUES(NEW.article_id, 'here1');
+    SET @likes_count := (SELECT count(*) FROM likes WHERE answer_id = NEW.answer_id);
+    UPDATE answers SET likes = @likes_count WHERE answers.id = NEW.answer_id;
+  END; END IF; 
+
+ 
+  IF NEW.question_id <> 0  THEN BEGIN
+    -- INSERT INTO logs (table_name, user) VALUES(NEW.article_id, 'here2');
+    SET @likes_count := (SELECT count(*) FROM likes WHERE question_id = NEW.question_id);
+    UPDATE articles SET likes = @likes_count WHERE question.id = NEW.question_id;
+  END; END IF;
+   
+    -- INSERT INTO logs (table_name, user) VALUES(NEW.article_id, 'here3');
+    
+END
+$$
+DELIMITER ;
+```
+
+## СОЗДАНИЕ ТАБЛИЦ
+```sql
 --------------------------------------------------
 // Таблица "Просмотренные страницы"
 
@@ -280,5 +312,4 @@ time_reg TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 ) DEFAULT CHARACTER SET utf8 ENGINE = MYISAM
 --------------------------------------------------
-.............................................................................-> СОЗДАНИЕ ТАБЛИЦ
 ```
