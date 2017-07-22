@@ -25,6 +25,7 @@ npm i webpack -g
 * [CSS-loader & Style-loader](#css-loader-style-loader)
 * [SASS-loader](#sass-loader)
 * [Jquery include](#jquery)
+* [JS Bundle & SASS Compile](#js-bundle-&-sass-compile)
 
 
 ---
@@ -211,4 +212,60 @@ window.$ = $;
 ```
 
 
+### JS Bundle & SASS Compile
+###### webpack.config.js
+```
+var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var extractPlugin = new ExtractTextPlugin({
+   filename: 'index.css' 
+});
+
+
+module.exports = {
+  entry: './public/gather.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/dist'
+  },
+  module: {
+
+    rules: [
+      /*
+      your other rules for JavaScript transpiling go in here
+      */
+      // { // regular css files
+      //   test: /\.css$/,
+      //   loader: ExtractTextPlugin.extract({
+      //     loader: 'css-loader?importLoaders=1',
+      //   }),
+      // },
+      { // sass / scss loader for webpack
+        test: /\.(sass|scss)$/,
+        // test: /\.scss$/,
+        use: extractPlugin.extract({
+          use:['css-loader', 'sass-loader']
+        })
+
+        // loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+      }
+    ]
+  },
+  plugins: [
+     extractPlugin
+  ],
+};
+```
+
+###### public/gather.js
+```js
+// Sass
+import './sass/index.scss';  // it will compile to - 'dist/index.css'
+
+
+// JS
+import './js/main.js';    // it will bundle to - 'dist/bundle.js'
+
+```
