@@ -213,6 +213,7 @@ window.$ = $;
 
 
 ### JS Bundle & SASS Compile
+packages -   css-loader, extract-text-webpack-plugin, gulp-sass, node-sass, sass-loader, webpack
 ###### webpack.config.js
 ```js
 var path = require('path');
