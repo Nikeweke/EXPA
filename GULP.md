@@ -29,7 +29,7 @@ gulp.task('sass:watch', function () {
 ```
 
 
-### Сделать из JS-scripts - JS minified(.min.js)
+### (MinifyJS) Сделать script.js -> script.min.js
 ###### gulpfile.js
 ```js
 var minify = require('gulp-minify');
@@ -52,7 +52,7 @@ gulp.task('compress', function() {
 });
 ```
 
-### Собрать Sass в Сss, JS в один Bundle
+### (Bundle Assets) Собрать Sass -> Сss, JS -> Bundle
 ###### gulpfile.js
 ```js
 
