@@ -25,7 +25,7 @@ npm i webpack -g
 * [CSS-loader & Style-loader](#css-loader-style-loader)
 * [SASS-loader](#sass-loader)
 * [Jquery include](#jquery)
-* [JS Bundle & SASS Compile](#js-bundle-&-sass-compile)
+* [JS Bundle & SASS Compile](#js-bundle--sass-compile)
 
 
 ---
@@ -214,7 +214,7 @@ window.$ = $;
 
 ### JS Bundle & SASS Compile
 ###### webpack.config.js
-```
+```js
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
