@@ -1,6 +1,6 @@
 ## Webpack
 
-Все связи типа require - работаю только в тех файлах которые пакуються webpack'om, тоесть если собрать bundle и подключить в страницу, а ниже подключить файл который будет запрашывать переменную из файла который запакован в bundle, будет ошибка. 
+Все связи типа require - работаю только в тех файлах которые пакуються webpack'om, тоесть если собрать bundle и подключить в страницу, а ниже подключить файл который будет запрашывать переменную из файла который запакован в bundle, будет ошибка. Но можно сделать запакованные функции доступными в html.
 Все подключение(require) происходит по примеру работы с NodeJS.
 
 ###### gather.js
@@ -15,6 +15,10 @@ require('bootstrap');
 
 // include my file
 require('./js/some.js');
+
+// U can use fns on html if u do it with window
+var main = require('./js/main.js');
+window.Main = main;
 ```
 ###### some.js (main.js лежит вместе с some.js)
 ```js
@@ -32,8 +36,13 @@ module.exports = { SomeArr: SomeArr }
 ###### index.html
 ```html
 ...
+
+
 <script src="dist/bundle.js"></script>    
 <script src="js/not_webpacked.js"></script> <!-- В этом файле нельзя будет взять SomeArr из main.js, так как запокован -->
+<script>
+  alert(Main.SomeArr) // это будет работать , так глобалное
+</script>
 ```
 
 
