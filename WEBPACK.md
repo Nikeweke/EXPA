@@ -1,5 +1,42 @@
 ## Webpack
 
+Все связи типа require - работаю только в тех файлах которые пакуються webpack'om, тоесть если собрать bundle и подключить в страницу, а ниже подключить файл который будет запрашывать переменную из файла который запакован в bundle, будет ошибка. 
+Все подключение(require) происходит по примеру работы с NodeJS.
+
+###### gather.js
+```js
+// include jq
+var $ = require("jquery");
+window.jQuery = $;
+window.$ = $;
+
+// include booter
+require('bootstrap');
+
+// include my file
+require('./js/some.js');
+```
+###### some.js (main.js лежит вместе с some.js)
+```js
+var Main = require('./main.js'); // 
+console.log('hi from some')
+alert(Main.SomeArr.hello);
+```
+###### main.js
+```js
+console.log('hi from main')
+var SomeArr = { hello: 'greeting' }
+module.exports = { SomeArr: SomeArr }
+```
+
+###### index.html
+```html
+...
+<script src="dist/bundle.js"></script>    
+<script src="js/not_webpacked.js"></script> <!-- В этом файле нельзя будет взять SomeArr из main.js, так как запокован -->
+```
+
+
 #### Делаем package.json в проекте 
 ```
 npm init
@@ -11,10 +48,9 @@ npm init
 npm i webpack -g
 ```
 
-#### Как подключить в Bundle Jquery и прочие пакеты 
+#### Как подключить в Bundle пакеты 
 
-* **Jquery** - `npm install jquery --save`;   `var $ = require('jquery');` 
-* **JQ Validate** - `npm install jquery-validate --save`;   `require('jquery-validate');` 
+`npm install jquery-validate --save`;   `require('jquery-validate');` 
 
 --- 
 ##### Оглавление
