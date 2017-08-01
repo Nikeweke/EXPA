@@ -1,3 +1,76 @@
+## Javascript Useful stuff
+
+
+#### Содержание
+* AJAX запрос
+* [XSRF(Laravel) для Ajax запросов](#)
+* По нажатию Ентер когда фокус на поле запуск функции
+* MOMENT.js - как получить время словами и на русском
+* GetData() - Получение данных с формы(div, form)
+* Функция для того чтобы взять значение из массива GET(localhost/?user=...)
+* Let it snow
+* Cookies
+* Получить дату сегодня
+* Проверка почты на валидность
+* Проверка объекта на пустоту
+* Jump to top
+* Проверка на сложность пароля
+* SIMPLE FUNCTIONS
+* AJAX load html
+
+---
+
+
+### AJAX запрос
+``` javascript
+function Ajaxik(postData, url, method){
+  $.ajax({
+           type: method,
+           async: true,
+           url: url,
+         //  dataType: 'json',
+           data : postData,
+           success: function(data) {
+                 // code here
+                 // if(data['success']{ alert(data['message']; }   
+           },
+          error: function (xhr, ajaxOptions, thrownError){
+            alert(xhr.status);  alert(thrownError);
+         }
+  })
+}
+
+```
+
+
+### Закрыть все Tooltips
+```js
+function CloseAllTooltips()
+{
+  $('[rel="tooltip"], .tooltip').tooltip("hide"); // hide tooltips
+}
+```
+
+
+
+### XSRF(Laravel) для Ajax запросов
+```js
+ $.ajaxSetup({
+       headers: {
+         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // для работы Лары
+       }
+   });
+```
+
+### По нажатию Ентер когда фокус на поле запуск функции
+```js 
+$('#weight_field').keypress(function(e) {
+   if(e.charCode == 13 || e.keyCode == 13) {
+      AddWeight();
+   }
+})
+```
+
 ###  MOMENT.js - как получить время словами и на русском
 ```javascript
 function GiveRelativeTime(date)
@@ -129,7 +202,7 @@ window.onload = function(){
 }
 ```
 
-## COOKIES
+### COOKIES
 
 ``` javascript
  /***********************************************************
@@ -176,19 +249,20 @@ function SetCookie(name,value)
    document.cookie = name + "=" + value +"; path=/; expires="+ now.toGMTString();
  }
  
+  
  
- 
- 
-  /***********************************************************
- *  Выход из системы (Очищение куков)
- *
- *******************************************************/
- function Logout()
+/***********************************************************
+*  Выход из системы (Очищение куков)
+*
+*******************************************************/
+function Logout()
   {
      DelCookie('Uid');
      DelCookie('Login');
      location.href = "login.html";
   }
+
+
 
 /***********************************************************
 *   Шифриуем куки
@@ -220,11 +294,8 @@ function CookieDecoder(Cookies)
 
 
 
-``` javascript
-/***********************************************************
-*   Возвращает отформатированную сегодняшнюю дату
-*
-*******************************************************/
+### Получить дату сегодня 
+```js
 function GetCurrentDate()
  {
    d = new Date();
@@ -237,53 +308,25 @@ function GetCurrentDate()
 
    return curr_date + "." + curr_month + "." + curr_year + " " + curr_hour + ":" + curr_minutes;
  }
+```
 
 
 
- /***********************************************************
-  *   Получение данных с формы(<div>,<form>)
-  *
-  *******************************************************/
- function GetData(obj_form)
-  {
-    var hData = {};
-    $('input, textarea, select', obj_form).each(function(){
-         if(this.name && this.name != '')
-          {
-            hData[this.name] = this.value;
-            console.log('hData[' + this.name + '] = ' + hData[this.name]);
-          }
-    });
-    return hData;
-  }
-
-
-
-
-
-
-/***********************************************************
-*   Проверка почты на валидность
-*
-*  @param string - emailAddress - почта на проверку
-*******************************************************/
+### Проверка почты на валидность
+```js
 function isValidEmailAddress(emailAddress)
  {
     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     return pattern.test(emailAddress);
  }
+```
 
 
 
 
 
-
-
-/***********************************************************
-*  Проверка массива на пустоту
-*
-*  @param array - object - массив на проверку на пустоту
-*******************************************************/
+### Проверка объекта на пустоту
+```js
 function isEmpty(object)
 {
   return JSON.stringify(object) == "{}";
@@ -292,11 +335,8 @@ function isEmpty(object)
 
 
 
-
-## BOOTSRAP func   */
-
+### Jump to top
 ``` javascript
-// JUMP TO TOP
 $(document).ready(function(){
       $('body').append('<div id="toTop" class="btn ma-btn"><span class="glyphicon glyphicon-chevron-up"></span> Наверх</div>');
     	$(window).scroll(function () {
@@ -311,35 +351,16 @@ $(document).ready(function(){
         return false;
     });
 });
+```
 
 
-
-
-// TOOLTIP(BOOTSRAP)
-// align can be: left,right,bottom,top
-function Tooltip(obj,word,align){
-
-    $(document).ready(function(){
-
-        var object = "#" + obj;
-        $(object).tooltip({title: word, placement: align});
-
-    });
-}
-
-
-
-
-
-// POWERPASS
+### Проверка на сложность пароля
+```
 function PowerPass(field){
 
             $(document).ready(function(){
-
-
                 var object = "#" + field;
-
-
+                
             //minimum 8 characters
             var bad = /(?=.{8,}).*/;
             //Alpha Numeric plus minimum 8
@@ -390,7 +411,7 @@ function PowerPass(field){
 
 
 
-## SIMPLE FUNCTIONS
+### SIMPLE FUNCTIONS
 ``` javascript
 
 //Показывает обьект который пришел как атрибут (JQUERY)
@@ -434,7 +455,7 @@ function HeadPage(page)
 
 
 
-## AJAX-FUNCTIONS
+## AJAX load html
 ``` javascript
 /* **************** Функция для действий от которых не надо ответ (Likes , Viewed pages)  */
 
@@ -472,85 +493,13 @@ function DivOut(obj,page_id)
 
 
 
-### Функция для одиночных действий , которым не нужнен тег FORM
-``` javascript
-function Action(button, page)
- {
-      // button - это нажатая кнопка
-     // page - на какой странице, в основном это статья полная
-
-      $.ajax({
-              type: 'POST',
-              async: false,
-              url: url,
-            //  dataType: 'json',
-              data : postData,
-              success: function(data)
-                         {
-                           // data['message']
-
-                            if(data['success']) // true or 1
-                              {
-                                  // Сообщение об удаче
-                                BNotify('check', data['message'], '','success', 'bottom', 'center');
-                                setInterval('location.href = "/home/"; ', 1000); // переброс через секунду на главную
-                               }
-
-                           else{ // 0 or false
-                             // Сообщение об провале
-                             BNotify('report', data['message'], '','danger', 'bottom', 'center');
-                              }
-                         },
-               error: function (xhr, ajaxOptions, thrownError)
-                       {
-                         alert(xhr.status);
-                         alert(thrownError);
-                       }
-            })
-}
-```
-
-
-
-###  Развернутый AJAX запрос
-``` javascript
-function SendForm()
- {
-      $.ajax({
-              type: 'POST',
-              async: false,
-              url: url,
-            //  dataType: 'json',
-              data : postData,
-              success: function(data)
-                         {
-                           // data['message']
-
-                            if(data['success']) // true or 1
-                              {
-                                  // Сообщение об удаче
-                                BNotify('check', data['message'], '','success', 'bottom', 'center');
-                                setInterval('location.href = "/home/"; ', 1000); // переброс через секунду на главную
-                               }
-
-                           else{ // 0 or false
-                             // Сообщение об провале
-                             BNotify('report', data['message'], '','danger', 'bottom', 'center');
-                              }
-                         },
-               error: function (xhr, ajaxOptions, thrownError)
-                       {
-                         alert(xhr.status);
-                         alert(thrownError);
-                       }
-            })
-
-```
 
 
 
 
-## Alerts
+
+
+### Alerts
 ``` javascript
 function Alertik(msg, type)
  {
@@ -576,25 +525,4 @@ function Alertik(msg, type)
 ```
 
 
-
-
-
-## Вызов на каждой странице
-``` javascript
-    //  TOOLTIPS
-    Tooltip('domik','Главная','left');
-    Tooltip('angrydog','DD','right');
-    Tooltip('timeline','Timeline','right');
-    Tooltip('exit-button','Выйти','right');
-
-    Tooltip('back','На главную','right');
-    Tooltip('like','Вподобайка','right');
-    Tooltip('getback_like','Не нравиться больше','right');
-
-    // Плавное передвижение к дивам типа #it, #games ....
-    //MovesToPositionSlowly();
-
-    // Проверка на прочность пароля
-    PowerPass('password');
-```
 
