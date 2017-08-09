@@ -113,6 +113,10 @@ function GiveRelativeTime(date)
 
 ### Получение данных с формы(div, form)
 ```javascript
+
+// также можно юзать вот эту функцию 
+// $("form").serializeArray();
+// $('input, textarea').not("input[type='submit']").serializeArray(); 
 function GetData(obj_form)
   {
      var hData = {};
