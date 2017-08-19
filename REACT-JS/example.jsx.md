@@ -1,25 +1,18 @@
-## Простой пример ReactJS
+## Простой пример React-JS (JSX) 
 
 ```jsx
-
 //  Import ReactJS requires
 import React from 'react';
 import ReactDOM from 'react-dom'
 
 
-//  Exporting and init class(Component) Todos
-// export default class Todos extends React.Component {
-
 // Class(Component) todos
 class Todos extends React.Component {
 
-  /*
-  *  VARS of CLASS
-  *
-  */
+
   constructor() {
      super();
-     this.state = { age: 30 };
+     this.state = { age: 30 };   // Вот так иниц. переменные в классе
 
      // вот это говорит что надо передать в функцию "this" потому как автоматом оно не появиться в методе ))
      // так что если нужно использовать в методе "this", надо писать вот так
@@ -43,21 +36,7 @@ class Todos extends React.Component {
    *
    */
    getTasks(){
-     $.ajax({
-               type: 'POST',
-               async: true,
-               url: '/tasker.class.php',
-             //  dataType: 'json',
-               data : {'get_tasks': 1},
-               success: function(data) {
-
-                  console.log(data);
-
-              },
-              error: function (xhr, ajaxOptions, thrownError){
-                alert(xhr.status);  alert(thrownError);
-             }
-      })
+      alert("U get tasks")
    }
 
 
