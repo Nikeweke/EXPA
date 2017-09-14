@@ -9,6 +9,7 @@
 * [Запуск приложения в браузере](#Запуск-приложения-в-браузере)
 * [Запуск и Test приложения на Android Studio](#Запуск-и-test-приложения-на-android-studio)
 * [Подключение и использование Ionic Native - SQLite](#Подключение-и-использование-ionic-native--sqlite)
+* [Работа с БД(SQlite)](#Работа-с-БД-sqlite)
 * [Приложение для определенных версий Android (API Level)](#Приложение-для-определенных-версий-android-api-level)
 * [Production (--prod)](#production---prod)
 * [Основные комманды](#Основные-комманды)
@@ -169,6 +170,50 @@ export class HomePage {
 <preference ..... />
 <preference name="android-minSdkVersion" value="16" />
 <preference name="android-targetSdkVersion" value="19" />
+```
+
+## Работа с БД(Sqlite)
+
+#### Разница между обычными запросами и запросами с подстановкой ( ? )
+```ts
+//-------------------> Вот здесь подстановка без знака ?,  тут надо использовать - .then().catch;
+return new Promise(resolve => {
+   var query = "DELETE FROM tasks WHERE id = "+ id +"";
+
+   this.db.executeSql(query, {}).then((s) => {
+      console.log('Delete Success...', s);
+
+      this.toastCtrl.create({
+         message: 'Task deleted!',
+         duration: this.duration_toast,
+         position: 'top'
+      }).present();
+      resolve(true);
+
+   }).catch((err) => {
+       console.log('Deleting Error', err);
+  });
+})
+
+
+//-------------------> Вот здесь подстановка с помощью знака ?, но при этом тут нельзя использовать тогда - .then().catch
+  return new Promise(resolve => {
+     var query = "DELETE FROM tasks WHERE id = ?";
+
+     this.db.executeSql(query, [id], (s) => {
+        console.log('Delete Success...', s);
+
+        this.toastCtrl.create({
+           message: 'Task deleted!',
+           duration: this.duration_toast,
+           position: 'top'
+        }).present();
+        resolve(true);
+
+     }, (err) => {
+         console.log('Deleting Error', err);
+    });
+ })
 ```
 
 ## Production (--prod)
