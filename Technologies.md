@@ -1,7 +1,7 @@
 # Technologies
 
 ## Server-side
-#### `PHP (Laravel)`
+* **PHP (Laravel)**
 #### `NodeJS (Sails, Sockets.io)`
 #### `Golang (Revel, Gorilla)`
              
