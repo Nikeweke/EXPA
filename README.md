@@ -1,3 +1,7 @@
+### Technologies Nowadays
+https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
+
+
 ### Useful links
 * [Pastebin](https://pastebin.com/)
 * [Schema DB Designer](http://dbdesigner.net/designer)
