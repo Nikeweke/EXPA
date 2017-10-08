@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">          <!-- CSS-fr Bulma -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   <!-- FontAwesome icons -->
+
+  <!-- VueJS -->
+  <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+
+   <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color:#F5F5F5">
+     <div class="navbar-brand ">
+       <a class="navbar-item" href="http://bulma.io">
+         <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+       </a>
+       <div class="navbar-start">
+             <a class="navbar-item " href="http://bulma.io/expo/">
+               <span class="bd-emoji">⭐️</span>
+               Expo
+             </a>
+             <a class="navbar-item " href="http://bulma.io/love/">
+               <span class="bd-emoji">❤️</span>
+               Love
+             </a>
+           </div>
+     </div>
+   </nav> <br />
+
+
+     <!-- APP -->
+  <div id="app" class="container">
+
+      <!-- TITLE -->
+       <h1 class="title">Vue JS</h1>
+       <h2 class="subtitle">as angular-js</h2>
+
+       <!-- CHANE VAR -->
+       <div class="card">
+         <header class="card-header">
+           <p class="card-header-title">
+              <span class="tag is-warning"> Change var</span>
+           </p>
+         </header>
+         <div class="card-content">
+           <div class="content">
+             <article class="media">
+               <div class="media-left">
+                  <h3 style="font-size:25px">{{ penguins }}</h3>
+               </div>
+               <div class="media-content">
+                 <div class="content">
+                   <p>
+                     <strong class="title is-4">Penguins </strong>
+                   </p>
+                 </div>
+                 <nav class="level is-mobile">
+                   <div class="level-left">
+                     <a class="button" @click="addPenguin()">
+                       <span>Add some</span>
+                       <span class="icon is-small">
+                         <i class="fa fa-plus"></i>
+                       </span>
+                     </a>&nbsp;
+                     <a class="button" @click="rmPenguin()">
+                       <span>Remove some</span>
+                       <span class="icon is-small">
+                         <i class="fa fa-minus"></i>
+                       </span>
+                     </a>
+                   </div>
+                 </nav>
+               </div>
+             </article>
+           </div>
+         </div>
+       </div> <br />
+
+       <!-- V-MODEL -->
+       <div class="card">
+         <header class="card-header">
+           <p class="card-header-title">
+              <span class="tag is-warning">V-model</span>
+           </p>
+         </header>
+         <div class="card-content">
+           <article class="media">
+             <div class="media-content">
+               <div class="content">
+                 <p>
+                   <strong class="title is-4">Penguin Name is - {{ pengui_name }}</strong>
+                 </p>
+               </div>
+               <div class="field">
+                 <div class="control">
+                   <input class="input" type="text" placeholder="V-model" v-model="pengui_name">
+                 </div>
+               </div>
+             </div>
+           </article>
+         </div>
+       </div> <br />
+
+
+       <!-- DATA-BINDING -->
+       <div class="card">
+         <header class="card-header">
+           <p class="card-header-title">
+              <span class="tag is-warning">V-bind</span>
+           </p>
+         </header>
+         <div class="card-content">
+           <article class="media">
+             <div class="media-content">
+               <div class="content">
+                 <p>
+                   <strong class="title is-4">Penguin's hrefs</strong>
+                 </p>
+               </div>
+
+                 <a href="{{ website }}">Anchor - not workable anchor</a> <br />
+                 <a v-bind:href="website">Anchor - workable anchor</a>  <br />
+                 <span v-html="anchor"></span><br /><br />
+
+                 <div class="field">
+                   <div class="control">
+                     <input class="input" type="text" placeholder="Here using v-bind:value" v-bind:value="pengui_name">
+                   </div>
+                 </div>
+
+             </div>
+           </article>
+         </div>
+       </div> <br />
+
+
+
+
+
+
+</div>
+
+
+ <!--================================================= JS -->
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+</html>
