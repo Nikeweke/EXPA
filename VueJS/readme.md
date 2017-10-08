@@ -5,4 +5,4 @@
 * Vue CLI - https://github.com/vuejs/vue-cli
 
 ### Установка (необъязательно)
-#### `npm i vue-cli -g`
+### `npm i vue-cli -g`
