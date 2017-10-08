@@ -1,4 +1,4 @@
-## Vue.js
+## Vue.js as angular-js
 
 #### Содержание
 * Начало
