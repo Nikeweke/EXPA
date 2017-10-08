@@ -1,6 +1,6 @@
 ## Vue JS
 
-### [GitBooks](https://nikeweke.gitbooks.io/vuejs-3-in-1/content/)
+### [My book about VUE JS](https://nikeweke.gitbooks.io/vuejs-3-in-1/content/)
 
 * Tutorial - https://www.youtube.com/watch?v=DCwOPBxsXDs&index=5&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa
 * Vue CLI - https://github.com/vuejs/vue-cli
