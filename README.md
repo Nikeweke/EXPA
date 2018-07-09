@@ -1,11 +1,11 @@
-### Technologies Nowadays
-https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
-
 ### Set of Cool Hacker
 * **VS Code** - editor
 * **GitKraken** - work with gui git 
 * **Postman** - test api
 * **Xampp** - if u work with php
+
+### Technologies Nowadays
+https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
 
 ### Useful links
 * [Pastebin](https://pastebin.com/)
