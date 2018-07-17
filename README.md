@@ -1,5 +1,9 @@
 ### Starter Kit
 * **VS Code** - editor
+  + Vetur
+  + Rest Client
+  + Beautfiy
+  + One Dark Pro
 * **GitKraken** - work with gui git 
 * **Postman** - test api
 * **Xampp** - if u work with php
