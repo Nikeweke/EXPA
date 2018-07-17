@@ -1,10 +1,12 @@
-### Set of Cool Hacker
+### Starter Kit
 * **VS Code** - editor
 * **GitKraken** - work with gui git 
 * **Postman** - test api
 * **Xampp** - if u work with php
+* **Cmder** - comand line for Windows
 
 ### Technologies Nowadays
+https://github.com/kamranahmedse/developer-roadmap
 https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
 
 ### Useful links
