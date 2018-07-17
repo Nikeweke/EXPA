@@ -10,8 +10,8 @@
 * **Cmder** - comand line for Windows
 
 ### Technologies Nowadays
-https://github.com/kamranahmedse/developer-roadmap
-https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
+* Dev roadmap - https://github.com/kamranahmedse/developer-roadmap
+* My opinion - https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
 
 ### Useful links
 * [Pastebin](https://pastebin.com/)
