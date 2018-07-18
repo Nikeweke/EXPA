@@ -5,9 +5,14 @@
   + Beautfiy
   + One Dark Pro
 * **GitKraken** - work with gui git 
+* **Git** - version system
+  + git standup - can show what you have done recently in console (needs npm)
 * **Postman** - test api
 * **Xampp** - if u work with php
 * **Cmder** - comand line for Windows
+* **Firefox** - 
+  + Dark night mode - for eyes
+  + Color temparature - for eyes
 
 ### Technologies Nowadays
 * Dev roadmap - https://github.com/kamranahmedse/developer-roadmap
