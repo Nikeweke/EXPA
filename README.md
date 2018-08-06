@@ -4,6 +4,7 @@
   + Rest Client
   + Beautfiy
   + One Dark Pro
+  + More cool extensions: https://codeburst.io/top-javascript-vscode-extensions-for-faster-development-c687c39596f5
 * **GitKraken** - work with gui git 
 * **Git** - version system
   + git standup - can show what you have done recently in console (needs npm)
