@@ -1,9 +1,11 @@
-##   init Angular Object
+## AngularJS
+
+### Init Angular Object
 ``` javascript
 var app = angular.module('myApp', []);
 ```
 
-##  Создание контроллера 2(варианта)
+###  Создание контроллера 2(варианта)
 ``` javascript
 // 1 Variant
 angular
@@ -17,7 +19,7 @@ app.controller('MyController', function($scope){...}); // where app = angular.mo
                                                 
                                                 
 
-##   Передать свой заголовок в запросе (LOCAL)
+###   Передать свой заголовок в запросе (LOCAL)
 ``` javascript
  app.controller("Lists", function($scope, $http)
  {
@@ -28,7 +30,7 @@ app.controller('MyController', function($scope){...}); // where app = angular.mo
   
 
 
-##  Передать свой заголовок в запросе (GLOBAL)
+###  Передать свой заголовок в запросе (GLOBAL)
 ``` javascript
 var app = angular.module('MyApp', ['ngSanitize']).config(["$httpProvider", function($httpProvider) {
 
@@ -42,14 +44,14 @@ var app = angular.module('MyApp', ['ngSanitize']).config(["$httpProvider", funct
 
   
   
-##   Если tooltip(Bootstrap) не работает в зоне работы Angular
+###   Если tooltip(Bootstrap) не работает в зоне работы Angular
 ```html
 <i data-placement="top"  title="Tooltip on left" onmouseenter="$(this).tooltip('show')"></i>
 ```
 
 
 
-##   Развернутая функция $http
+###   Развернутая функция $http
 ```javascript
 $http({
             method: 'GET',
@@ -72,7 +74,7 @@ $http({
 
 
 
-##   Перехватчик клавиш
+###   Перехватчик клавиш
 ``` javascript
 // функция подействует если человек стоит на поле и жмет "Enter"
 app.controller("Lists", function($scope, $http)
@@ -87,7 +89,7 @@ app.controller("Lists", function($scope, $http)
 ```
 
 
-## $EMIT and $ON
+### $EMIT and $ON
 ```js
 app.controller('One', ['$scope', '$rootScope'
     function($scope) {
@@ -109,7 +111,7 @@ app.controller('two', ['$scope', '$rootScope'
 ]);
 ```
 
-## Как вытащить информацию которая пришла из секции $http 
+### Как вытащить информацию которая пришла из секции $http 
 ```js
 // Делаем функцию
 function GetSomething()
