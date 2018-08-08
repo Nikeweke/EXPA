@@ -1,4 +1,12 @@
-### Starter Kit
+## Experience from anywhere
+#### Содержание 
+* Starter Kit for Programming
+* Popular techologies
+* Links 
+
+---
+
+### Starter Kit for programming
 * **VS Code** - editor
   + Vetur
   + Rest Client
@@ -15,29 +23,24 @@
   + Dark night mode - for eyes
   + Color temparature - for eyes
 
-### Technologies Nowadays
+### Popular techonologies
 * Dev roadmap - https://github.com/kamranahmedse/developer-roadmap
 * My opinion - https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
 
-### Useful links
+### Links
+
 * [Pastebin](https://pastebin.com/)
 * [Schema DB Designer](http://dbdesigner.net/designer)
 * [WEB-books](http://webbooks.com.ua/books-main/dizajn/)
+* JS plugins
+  + [Flexdatalist](http://projects.sergiodinislopes.pt/flexdatalist/)
+  + [JQ Validate](https://jqueryvalidation.org/validate/)
+  + [Bootstrap-slider](http://seiyria.com/bootstrap-slider/)
+  + [PNotify](http://sciactive.com/pnotify/#demos-simple)
+  + [DEv-TOnes](http://rcptones.com/dev_tones/)
+* Database tools
+  + [RethinkDB Admin(REQLPRO)](http://reqlpro.com/#downloads)
 
 
-### Useful plugins for web
-* [Flexdatalist](http://projects.sergiodinislopes.pt/flexdatalist/)
-* [JQ Validate](https://jqueryvalidation.org/validate/)
-* [Bootstrap-slider](http://seiyria.com/bootstrap-slider/)
-* [PNotify](http://sciactive.com/pnotify/#demos-simple)
-* [DEv-TOnes](http://rcptones.com/dev_tones/)
 
-### Useful tools for web
-* [RethinkDB Admin(REQLPRO)](http://reqlpro.com/#downloads)
-
-
-### EXPA from CSS, JS, and other stuff
-### Как увелечить скорость загрузки сайта ?:
-* minify css, js
-* CDN
 
