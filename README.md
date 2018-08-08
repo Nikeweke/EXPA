@@ -1,4 +1,4 @@
-## Experience from anywhere
+## Experience
 #### Содержание 
 * Starter Kit for Programming
 * Popular techologies
@@ -19,7 +19,7 @@
 * **Postman** - test api
 * **Xampp** - if u work with php
 * **Cmder** - comand line for Windows
-* **Firefox** - 
+* **Firefox** 
   + Dark night mode - for eyes
   + Color temparature - for eyes
 
@@ -28,7 +28,6 @@
 * My opinion - https://github.com/Nikeweke/EXPA/blob/master/Technologies.md
 
 ### Links
-
 * [Pastebin](https://pastebin.com/)
 * [Schema DB Designer](http://dbdesigner.net/designer)
 * [WEB-books](http://webbooks.com.ua/books-main/dizajn/)
