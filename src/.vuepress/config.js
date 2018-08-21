@@ -18,6 +18,8 @@ module.exports = {
         title: 'Frontend',
         collapsable: true,
         children: [
+          '/frontend/cdn-links.md',
+          '/frontend/css-resources.md',
           '/frontend/gulp.md',
           '/frontend/webpack.md',
           '/frontend/sass.md',
@@ -35,6 +37,7 @@ module.exports = {
         children: [
           '/tools/apidoc.md',
           '/tools/git.md',
+          '/tools/mermaid.md',
         ]
       },
       {

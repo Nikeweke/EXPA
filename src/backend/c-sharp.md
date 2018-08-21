@@ -1,22 +1,18 @@
-# EXPA--C-SHARP
+# C#
 
 Установка цветовой схемы: Сервис -> Импорт и экспорт -> выбрать настройки (цвет. схему)
 * Схемы [здесь](https://studiostyl.es/schemes/one-dark)
 * [Работа с MySQL](http://zetcode.com/db/mysqlcsharptutorial/) 
 
 ### Содержание
-* **Hello world**
-* **Readline and Output it**
-* **MySQL connect**
-* **Classes and Methods**
-* **Namespaces**
+[[toc]]
 
 ---
 
 
 ### Hello world 
 ###### Без класса не может быть ф-ция, для использование Console надо - `using System;`
-```c#
+```c
 using System;
 
 class Program
@@ -32,7 +28,7 @@ class Program
 
 
 ### Readline and Output it
-```c#
+```c
 using System;
 class Program
  {
@@ -60,7 +56,7 @@ class Program
 
 ### MySQL connect
 Нужно установить коннектор к БД через  управляющего пакетами проекта Nuget: пакет **MySql.Data.MySqlClient**
-```c#
+```c
 using System;
 using MySql.Data.MySqlClient; // подключение ф-ций для работы с БД
 
@@ -92,7 +88,7 @@ class Program
 
 ### Classes and Methods
 По-ум. методы с типом **private**
-```c#
+```c
 using System;
  class Programm
     {
@@ -117,7 +113,7 @@ using System;
 
 ### Namespaces
 ###### Main.cs
-```c#
+```c
 using System;
 using App.Models;
 namespace App
@@ -136,7 +132,7 @@ namespace App
 }
 ```
 ###### Class.cs
-```c#
+```c
 using System;
 namespace App.Models
 {

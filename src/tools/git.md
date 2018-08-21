@@ -4,6 +4,20 @@
 
 ---
 
+### Links
+* [RawGit](https://rawgit.com/) - возможность закинуть на гит стили и еще что-то и потом достать из гита как cdn.
+
+### Top commands
+* `git add -A` - добавить все файлы для отслеживания
+* `git add .` - добавить все файлы для отслеживания
+* `git commit -m 'new'` - сделать подтверждение изменение с комментарием (комментарий обязательно)
+* `git push origin master` - сделать закачку файлов в репозиторий
+* `git config --list` - настройки git
+* `git remote add origin https://github.com/someRepo.git` - добавление адреса 
+* `git remote -v` - просмотр данных от адресах
+* `git checkout -b trunk` - создание ветки "trunk"  и переход на нёё
+* `git branch` - просмотр веток
+
 ## Set credentials 
 создаем пользователя глобального с именем и почтой
 ```

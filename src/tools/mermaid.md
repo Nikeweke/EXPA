@@ -1,8 +1,9 @@
-## Mermaid - make chart with text
+# Mermaid 
+### make chart with text
 * [Mermaid](https://mermaidjs.github.io/usage.html)
 
 #### Links
-```
+```html
 <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/0.5.6/dist/mermaid.css">
 
 <div class="mermaid">CODE HERE</div>
@@ -46,4 +47,4 @@ graph TB
       id1 --> id2
 ```
 **Output**
-![](/assets/output.png)
+![](../assets/output.png)

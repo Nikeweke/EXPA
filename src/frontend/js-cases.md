@@ -1,53 +1,67 @@
 # JS cases
 
-
 #### Содержание
-* Получить дату по частям
-* AJAX запрос
-* [XSRF(Laravel) для Ajax запросов](#)
-* По нажатию Ентер когда фокус на поле запуск функции
-* MOMENT.js - как получить время словами и на русском
-* GetData() - Получение данных с формы(div, form)
-* Функция для того чтобы взять значение из массива GET(localhost/?user=...)
-* Let it snow
-* Cookies
-* Получить дату сегодня
-* Проверка почты на валидность
-* Проверка объекта на пустоту
-* Jump to top
-* Проверка на сложность пароля
-* SIMPLE FUNCTIONS
-* AJAX load html
+[[toc]]
 
 ---
 
+### `array.map({...} => ...)` - забрать значение из массива
+
+```js
+// Допустим есть массив обьектов
+let arr = [
+  {name: 'vas', info: [...]},
+  {name: 'vas', info: [...]},
+  {name: 'vas', info: [...]},
+  {name: 'vas', info: [...]},
+];
+
+// И надо забрать из массива все поля info и вернуть новый массив
+// где только newArr = [[...],[...],[...]], [...] - это все что взяли из info
+let newArr = arr.map(({info}) => info );
+```
+
+### `const, let {...} = some_object;` - забрать значение из обьекта
+
+```js
+// Допустим надо забрать из обьекта несколько полей
+let someObj = {name:..., surname:..., age:...};
+
+// Забираем ()
+let {name, surname, age} = someObj;
+// OR const {... 
+
+// Используем как переменные 
+console.log(name, surname, age);
+```
+
+
 ### Получить дату по частям
 ```js
-        GetDateInParts: function(){
-            var d = new Date();
-            var day   = d.getDate();
-            var month = d.getMonth() + 1;
-            var year  = d.getFullYear();
-            var min   = d.getMinutes();
-            var hours = d.getHours();
+function GetDateInParts(){
+  var d = new Date();
+  var day   = d.getDate();
+  var month = d.getMonth() + 1;
+  var year  = d.getFullYear();
+  var min   = d.getMinutes();
+  var hours = d.getHours();
 
-            if(min   < 10){ min   = '0' + min;   }
-            if(hours < 10) { hours = '0' + hours; }
-            if(day < 10){ day =  "0" + day   }
-            if(month < 10){ month =  "0" + month   }
+  if(min   < 10){ min   = '0' + min;   }
+  if(hours < 10) { hours = '0' + hours; }
+  if(day < 10){ day =  "0" + day   }
+  if(month < 10){ month =  "0" + month   }
 
-            partTime = {
-                          day: day,
-                          month: month,
-                          year: year,
-                          min:  min,
-                          hour: hours,
-                          date: `${day}-${month}-${year}`,
-                          time: hours +":"+ min
-                         }
+  partTime = {
+                day: day,
+                month: month,
+                year: year,
+                min:  min,
+                hour: hours,
+                time: hours +":"+ min
+               }
 
-            return partTime;
-          },
+  return partTime;
+}
 ```
 
 ### AJAX запрос
@@ -388,7 +402,8 @@ $(document).ready(function(){
 
 
 ### Проверка на сложность пароля
-```
+
+```js
 function PowerPass(field){
 
             $(document).ready(function(){
@@ -488,7 +503,7 @@ function HeadPage(page)
 
 
 
-## AJAX load html
+### AJAX load html
 ``` javascript
 /* **************** Функция для действий от которых не надо ответ (Likes , Viewed pages)  */
 
