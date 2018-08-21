@@ -4,7 +4,6 @@
 
 * Оптимизация Web - [https://ruhighload.com/](https://ruhighload.com/)
 * SQL w3school - https://www.w3schools.com/sql/sql\_join.asp
-* [Mermaid](https://mermaidjs.github.io/usage.html) - рисование схем текстом
 
 #### Telegram
 

@@ -1,16 +1,14 @@
-## Простой пример React-JS (JSX) 
+# Example 1 
 
 ```jsx
 //  Import ReactJS requires
 import React from 'react';
 import ReactDOM from 'react-dom'
 
-
 // Class(Component) todos
 class Todos extends React.Component {
 
-
-  constructor() {
+ constructor() {
      super();
      this.state = { age: 30 };   // Вот так иниц. переменные в классе
 
@@ -18,8 +16,6 @@ class Todos extends React.Component {
      // так что если нужно использовать в методе "this", надо писать вот так
      this.clicked = this.clicked.bind(this);
   }
-
-
 
   /*
   *  Just click on me func
@@ -30,7 +26,6 @@ class Todos extends React.Component {
       this.getTasks()
    };
 
-
    /*
    *  Get tasks from DB
    *
@@ -38,9 +33,6 @@ class Todos extends React.Component {
    getTasks(){
       alert("U get tasks")
    }
-
-
-
 
   /*
   *  Render HTML

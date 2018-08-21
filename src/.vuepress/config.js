@@ -14,6 +14,7 @@ module.exports = {
       '/introduction.md',
       '/starter-kit.md',
       '/technologies.md',
+      '/links.md',
       {
         title: 'Frontend',
         collapsable: true,
@@ -60,6 +61,10 @@ module.exports = {
         collapsable: true,
         children: [
           '/deploying/heroku.md',
+          '/deploying/unix.md',
+          '/deploying/vps.md',
+          '/deploying/mailgun-tie-domain-with-email.md',
+          '/deploying/mailgun-tie-domain-with-vps.md',
         ]
       },
     ]
