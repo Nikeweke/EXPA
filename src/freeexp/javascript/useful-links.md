@@ -1,0 +1,18 @@
+## Useful links
+
+* [Isotope](https://isotope.metafizzy.co/events.html)
+* [Holmes](https://haroen.me/holmes/)
+* [WAIT!](http://waitanimate.wstone.io/#!/#%2F)
+* [Chartist.js](http://js-tutorial.com/chartistjs-simple-responsive-charts-1140)
+* [JQ Validate](https://jqueryvalidation.org/validate/)
+* [Flexdatalist](http://projects.sergiodinislopes.pt/flexdatalist/)
+* [Typeahead.js](http://twitter.github.io/typeahead.js/examples/)
+* [Tooltipster](http://iamceege.github.io/tooltipster/)
+* [Slinky](http://alizahid.github.io/slinky/)
+* [Google chart1](https://developers.google.com/chart/interactive/docs/gallery/wordtree)
+* [Google chart2](https://developers.google.com/chart/interactive/docs/gallery/barchart)
+* [Nanogallery2](https://nanogallery2.nanostudio.org/index.html#nanogallery/nanogallery/oceans)
+* [Photo popup](http://dimsemenov.com/plugins/magnific-popup/)
+* [Knob](http://anthonyterrien.com/demo/knob/)
+* [JQ Mask](https://igorescobar.github.io/jQuery-Mask-Plugin/)
+* [Photo popup](http://dimsemenov.com/plugins/magnific-popup/)
