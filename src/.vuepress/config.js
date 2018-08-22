@@ -9,7 +9,6 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/'},
       { text: 'To repository', link: 'https://github.com/Nikeweke/EXPA/'},
-    
     ],
     sidebar: [
       '/introduction.md',
