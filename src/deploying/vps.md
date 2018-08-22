@@ -1,6 +1,6 @@
-## VPS
+# VPS
 
-* Host 1 Plus - good vps with good prices
+* [Host 1 Plus](https://www.host1plus.com) - good vps with good prices
 * [How to setup LEMP and start Laravel](http://devmarketer.io/learn/deploy-laravel-5-app-lemp-stack-ubuntu-nginx/)
 
 --- 

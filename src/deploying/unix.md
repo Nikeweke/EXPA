@@ -1,13 +1,6 @@
-## Unix basic
-##### Содержание
-* Packages(Ubuntu - apt-get)
-* Commands
-* Launching files
-* Права на папку и переименование
-* Node JS Deploy решение почему же приложение падает после закрытия окна
-* Удаление Nginx под чистую 
-* Kill process in top(task manager)
-* Remove folder with files
+# Unix
+#### Содержание
+[[toc]]
 
 ---
 
@@ -40,7 +33,6 @@
 * **netstat  -lp** - список приложений и их порты + активные подкючения
 
 
-
 ### Launching files
 * Launch file without **.sh** - `./filename`
 * Launch **file.sh** - `bash filename.sh`
@@ -50,20 +42,13 @@
 * `sudo mv robot robot_new` - переименовать папку
 * `HELP commands  when HOLD windows button
 
-### Node JS Deploy решение почему же приложение падает после закрытия окна
-Запуск был такой : `node app prod &`; Все работает отлично когда Putty окно открыто, после падает приложение. В чем проблема была? Был вывод в приложении `console.log` и надо либо убрать этот вывод либо писать в файл лог вот так:
-```bash
-# Запись вывода приложения в файлик
-$ node app prod & >> log.txt
-```
-
 ### Удаление Nginx под чистую 
 ```bash
 apt-get remove --purge nginx nginx-full nginx-common
 apt-get install nginx
 ```
 
-#### Kill process in top(task manager)
+### Kill process in top(task manager)
 ```bash
 top
 kill -9 [PID]
@@ -75,8 +60,10 @@ k -> [PID]
 signal -> 9
 ```
 
-#### Remove folder with files
-
+### Remove folder with files
 ```bash
 rm -rf name_folder
 ```
+
+### Deploying Laravel on VPS, LEMP(Linux, Nginx, MySQL, PHP)
+[DevMarketer guide](http://devmarketer.io/learn/deploy-laravel-5-app-lemp-stack-ubuntu-nginx/)

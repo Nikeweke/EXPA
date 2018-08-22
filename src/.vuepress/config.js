@@ -30,6 +30,7 @@ module.exports = {
           '/frontend/jq-validate.md',
           '/frontend/animated-bg.md',
           '/frontend/angular-js.md',
+          '/frontend/react-js.md'
         ]
       },
       {
@@ -39,13 +40,6 @@ module.exports = {
           '/tools/apidoc.md',
           '/tools/git.md',
           '/tools/mermaid.md',
-        ]
-      },
-      {
-        title: 'Backend',
-        collapsable: true,
-        children: [
-          '/backend/c-sharp.md',
         ]
       },
       {
@@ -63,8 +57,11 @@ module.exports = {
           '/deploying/heroku.md',
           '/deploying/unix.md',
           '/deploying/vps.md',
-          '/deploying/mailgun-tie-domain-with-email.md',
-          '/deploying/mailgun-tie-domain-with-vps.md',
+          '/deploying/namecheap-domain-to-vps.md',
+          '/deploying/mailgun-mail/intro.md',
+          '/deploying/mailgun-mail/api.md',
+          '/deploying/mailgun-mail/smtp.md',
+          '/deploying/docker.md'
         ]
       },
     ]
