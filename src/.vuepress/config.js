@@ -6,10 +6,11 @@ module.exports = {
   port: '3000',
 
   themeConfig: {
-    nav: [{
-      text: 'Home',
-      link: '/'
-    }, ],
+    nav: [
+      { text: 'Home', link: '/'},
+      { text: 'To repository', link: 'https://github.com/Nikeweke/EXPA/'},
+    
+    ],
     sidebar: [
       '/introduction.md',
       '/starter-kit.md',
