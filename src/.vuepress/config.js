@@ -26,6 +26,7 @@ module.exports = {
           '/frontend/sass.md',
           '/frontend/css-tricks.md',
           '/frontend/js-cases.md',
+          '/frontend/js-es678.md',
           '/frontend/js-plugins.md',
           '/frontend/jq-validate.md',
           '/frontend/animated-bg.md',
