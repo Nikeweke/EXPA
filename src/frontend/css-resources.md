@@ -36,6 +36,7 @@
 
 ### Colors and Images
 * [Gradients](http://gradients.io/)
+* [Tilda Colors](https://tilda.cc/ru/colors/#gradients)
 * [Animated grad bckg](https://www.gradient-animator.com/)
 * [In color balance](http://color.romanuke.com/page/10/)
 * [Unsplash](https://unsplash.com/)
