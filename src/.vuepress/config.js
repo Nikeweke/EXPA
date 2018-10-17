@@ -14,7 +14,6 @@ module.exports = {
       '/introduction.md',
       '/starter-kit.md',
       '/technologies.md',
-      '/links.md',
       {
         title: 'Frontend',
         collapsable: true,

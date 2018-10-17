@@ -6,6 +6,7 @@
 * [Tutorial](https://www.tutorialspoint.com/reactjs/reactjs_keys.htm)
 * [MaterialDesign](http://www.material-ui.com/#/get-started/installation)
 * [React Bootstrap](https://react-bootstrap.github.io/introduction.html)
+* [Smart and dumb components](https://jaketrent.com/post/smart-dumb-components-react/)
 
 ---
 
