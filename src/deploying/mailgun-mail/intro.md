@@ -1,4 +1,5 @@
 # Mailgun - mail service
+[Setup mailgun](https://medium.com/@ustcboulder/setup-mailgun-on-namecheap-spf-dkim-cname-and-mx-684b5c1fb492)
 
 ### Данные для привязки почты (создание записей) к доменному имени находяться в Mailgun
 ![](../../assets/mailgun_subdomain_setup.png)
