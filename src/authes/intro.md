@@ -2,6 +2,7 @@
 
 * [Habr](https://habr.com/ru/company/dataart/blog/262817/)
 * [Dataart](https://dataart.ua/news/autentifikatsiya-i-avtorizatsiya-v-mikroservisny-h-prilozheniyah/)
+* [OAuth and OpenID](http://softwaremaniacs.org/blog/2011/07/14/openid-oauth-difference/)
 
 Содержание 
 [[toc]]
