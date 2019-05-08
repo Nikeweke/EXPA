@@ -17,6 +17,46 @@ npm i passport passport-google-oauth20 -S
 ![](../assets/Screenshot_3.png)
 
 ```js
+// app.js
+const express  = require('express')
+const passport = require('./passport-setup')
+const app      = express()
+
+// home
+app.get('/', (req, res) => {
+	res.send(`
+		<h2>Welcome to our MyPassportAuthes</h2>
+		<a href="/google_login">Google login</a>
+	`)
+})
+app.get('/fail', (req, res) => {
+  res.send("Something went wrong")
+})
+
+// ==========================> AUTH routes
+app.use(passport.initialize())
+
+// google-auth
+app.get('/google_login', passport.authenticate('google', {
+	scope: ['profile'] // запрашиваемые данные пользователя от google 
+}))
+
+app.get('/google_redirect', passport.authenticate('google', { failureRedirect: '/fail' }), (req, res) => {
+	res.send(`
+		<h3>Authed by google successfuly</h3>
+		<a href="/">Get back</a>
+	`)
+})
+
+
+// Launch our app
+const port = 8000;
+const server = app.listen(port, function () {
+    console.log('JWT listening on port ' + port);
+});
+```
+
+```js
 // passport-setup.js
 const keys           = require('./keys')
 const passport       = require('passport')
@@ -31,14 +71,19 @@ const googleOptions = {
   clientID    : keys.google.clientID,
   clientSecret: keys.google.clientSecret
 }
+
 const googleCallback = (accessToken, refreshToken, profile, done) => {
   console.log('ACCESS TOKEN =', accessToken)
   console.log('REFRESH TOKEN =', refreshToken)
   console.log('PROFILE = ', profile)
-  
+  /*
+  #  Оперировать(добавлять/искать в БД) информацией пользователя нужно здесь, 
+  #  дальше инфа не идет(то есть в обработчик редиректа)  
+  */
   // без вызова этой функции не идет дальше выполнение программы
   done(null, profile) 
 }
+
 passport.use(new GoogleStrategy(googleOptions, googleCallback))
 
 // без реализации этой функции - выдает ошибку
@@ -49,27 +94,6 @@ passport.serializeUser((user, done) => {
 
 module.exports = passport
 ```
-
-```js
-// app.js
-const express  = require('express')
-const app      = express()
-const passport = require('./passport-setup')
-
-app.use(passport.initialize())
-
-// google-auth
-app.get('/google_login', passport.authenticate('google', {
-	scope: ['profile'] // запрашиваемые данные от гугла от пользователе
-}))
-
-app.get('/google_redirect', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
-  res.send('Authed by google successfuly')
-})
-```
-
-
-
 
 ---
 

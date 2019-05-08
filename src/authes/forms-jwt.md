@@ -3,7 +3,12 @@
 * [5 steps understand jwt-auth](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec)
 * [Authentication nowadays](https://hackernoon.com/how-do-you-authenticate-mate-f2b70904cc3a)
 
-### Шаги аутентификации и авторизации
+#### Содержание
+[[toc]]
+
+--- 
+
+### Сценарий аутентификации и авторизации
 1. Клинет отсылает свои данные(`username, password`), на сервер. 
 
 2. Сервер смотрит есть ли такой пользователь в системе, если нет - то переход на логин страницу.
@@ -16,35 +21,34 @@
 
 > Если подписи совпадают, то это означает, что JWT является действительным, что указывает на то, что вызов API поступает из подлинного источника. В противном случае, если подписи не совпадают, это означает, что полученный JWT является недействительным, что может быть индикатором потенциальной атаки на приложение. Таким образом, проверяя JWT, приложение добавляет уровень доверия между собой и пользователем.
 
-6. Выход - осуществляется удалением токена из кук и БД 
+6. Выход - осуществляется удалением токена из кук 
 
 ### Quick sample
 ```js
-// Load in our dependencies
-const express = require('express');
-const jwt     = require('jsonwebtoken');
+const express = require('express')
+const jwt     = require('jsonwebtoken')
 
 const app        = express()
 const JWT_SECRET = 'supersecret'
 
-// Register the home route that displays a welcome message
-// This route can be accessed without a token
+// Зарегистрируйем домашний маршрут, который отображает приветственное сообщение
+// К этому маршруту можно получить доступ без токена
 app.get('/', (req, res) => {
-  res.send("Welcome to our API");
+  res.send("Welcome to our API")
 })
 
-// Register the route to get a new token
-// In a real world scenario we would authenticate user credentials
-// before creating a token, but for simplicity accessing this route
-// will generate a new token that is valid for 2 minutes
+// Зарегистрируем маршрут, чтобы получить новый токен
+// В реальном мире мы бы аутентифицировали учетные данные пользователя
+// перед созданием токена, но для простоты доступа к этому маршруту
+// создаст новый токен, действительный в течение 2 минут
 app.get('/token', (req, res) => {
-  const token = jwt.sign({ username:'ado', id: 1}, JWT_SECRET, {expiresIn: 120});
+  const token = jwt.sign({ username:'ado', id: 1}, JWT_SECRET, {expiresIn: 120})
   res.send(token)
 })
 
-// Register a route that requires a valid token to view data
+// Зарегистрируем маршрут, который требует действительный токен для просмотра данных
 app.get('/api', (req, res) => {
-  const token = req.query.token;
+  const token = req.query.token
 
   // Даже не нужно лезть в БД для проверки пользователя,
   // достаточно проверить токен с помощью своего ключа,
@@ -52,18 +56,18 @@ app.get('/api', (req, res) => {
   jwt.verify(token, JWT_SECRET, (err, decoded) => {
     console.log(decoded)
     if (!err) {
-      const secrets = {"accountNumber" : "938291239","pin" : "11289","account" : "Finance"};
-      res.json(secrets);
+      const secrets = {"accountNumber" : "938291239","pin" : "11289","account" : "Finance"}
+      res.json(secrets)
     } else {
-      res.send(err);
+      res.send(err)
     }
   })
 
 })
 
 // Launch our app
-const port = process.env.NODE_ENV === 'production' ? 80 : 8000;
+const port = 8000
 const server = app.listen(port, function () {
-    console.log('JWT listening on port ' + port);
-});
+  console.log('JWT listening on port ' + port)
+})
 ```

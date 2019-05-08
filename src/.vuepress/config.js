@@ -64,6 +64,16 @@ module.exports = {
           '/deploying/docker.md'
         ]
       },
+      {
+        title: 'Authentications',
+        collapsable: true,
+        children: [
+          '/authes/intro.md',
+          '/authes/forms-jwt.md',
+          '/authes/oauth.md',
+          '/authes/oauth-google.md',
+        ]
+      },
     ]
   }
 }
