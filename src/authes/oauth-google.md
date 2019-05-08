@@ -1,6 +1,6 @@
-# Google Auth
+# OAuth - Google
 
-1. **passportjs** - пакет упрощяющий работу с OAuth & OpenID, который уже имеет стратегии для работы с разными сервисами
+1. **Passportjs** - пакет упрощяющий работу с OAuth & OpenID, который уже имеет стратегии для работы с разными сервисами
 ```sh
 # google oauth strat
 npm i passport passport-google-oauth20 -S

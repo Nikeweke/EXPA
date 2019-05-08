@@ -72,6 +72,7 @@ module.exports = {
           '/authes/forms-jwt.md',
           '/authes/oauth.md',
           '/authes/oauth-google.md',
+          '/authes/oauth-github.md',
         ]
       },
     ]
