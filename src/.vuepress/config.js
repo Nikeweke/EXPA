@@ -73,6 +73,14 @@ module.exports = {
           '/authes/oauth.md',
           '/authes/oauth-google.md',
           '/authes/oauth-github.md',
+          '/authes/auth-services.md',
+        ]
+      },
+      {
+        title: 'CI/CD',
+        collapsable: true,
+        children: [
+          '/ci-cd/intro.md',
         ]
       },
     ]
