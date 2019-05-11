@@ -83,6 +83,13 @@ module.exports = {
           '/ci-cd/intro.md',
         ]
       },
+      {
+        title: 'Loggers',
+        collapsable: true,
+        children: [
+          '/loggers/intro.md',
+        ]
+      },
     ]
   }
 }
