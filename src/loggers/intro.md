@@ -1,9 +1,23 @@
-# Loggers
+# Intro
+
+[About logger frameworks](https://www.coreycleary.me/should-you-use-a-logging-framework-or-console-log-in-node/)
 
 Содержание
 [[toc]]
 
 --- 
+
+### Различие между `console.log` & Logger frameworks?
+
+|                                 | console.log                | logger frameworks |
+|---------------------------------|----------------------------|-------------------|
+| **Доп. зависимости**                | Нет                        | Да                |
+| **Включение/отключение логгера**    | Нет                        | Да                |
+| **Запись в логи**                   | Нет                        | Да                |
+| **Сложно понять уровень сообщения** | Да, большинство это stdout | Нет               |
+| **Запись логов в несколько файлов** | Нет                        | Да                |
+| **Отсекание сообщений по уровню**   | Нет                        | Да                |
+
 
 ### Winston - the best among loggers
 ```sh
