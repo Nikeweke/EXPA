@@ -78,17 +78,19 @@ module.exports = {
         ]
       },
       {
-        title: 'CI/CD',
-        collapsable: true,
-        children: [
-          '/ci-cd/intro.md',
-        ]
-      },
-      {
         title: 'Loggers',
         collapsable: true,
         children: [
           '/loggers/intro.md',
+        ]
+      },
+      {
+        title: 'Tests and CI/CD',
+        collapsable: true,
+        children: [
+          '/tests-cicd/intro.md',
+          '/tests-cicd/tests.md',
+          '/tests-cicd/ci-cd.md',
         ]
       },
     ]
