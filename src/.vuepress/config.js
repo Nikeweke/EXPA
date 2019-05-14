@@ -93,6 +93,13 @@ module.exports = {
           '/tests-cicd/ci-cd.md',
         ]
       },
+      {
+        title: 'Clouds',
+        collapsable: true,
+        children: [
+          '/clouds/firebase-db.md',
+        ]
+      },
     ]
   }
 }

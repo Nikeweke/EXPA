@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Firebase Realtime Database | Expa</title>
+    <meta name="description" content="Experience from IT world">
+    
+    
+    <link rel="preload" href="/EXPA/assets/css/0.styles.7fd1fbfe.css" as="style"><link rel="preload" href="/EXPA/assets/js/app.8ff0aae1.js" as="script"><link rel="preload" href="/EXPA/assets/js/14.122b996c.js" as="script"><link rel="prefetch" href="/EXPA/assets/js/10.a62ac95a.js"><link rel="prefetch" href="/EXPA/assets/js/11.88e577d9.js"><link rel="prefetch" href="/EXPA/assets/js/12.b3ac863c.js"><link rel="prefetch" href="/EXPA/assets/js/13.818b1603.js"><link rel="prefetch" href="/EXPA/assets/js/15.51c45c92.js"><link rel="prefetch" href="/EXPA/assets/js/16.061804e4.js"><link rel="prefetch" href="/EXPA/assets/js/17.65a6bf23.js"><link rel="prefetch" href="/EXPA/assets/js/18.c57c9dcf.js"><link rel="prefetch" href="/EXPA/assets/js/19.13151605.js"><link rel="prefetch" href="/EXPA/assets/js/2.1409550b.js"><link rel="prefetch" href="/EXPA/assets/js/20.4b120f9e.js"><link rel="prefetch" href="/EXPA/assets/js/21.9f65326a.js"><link rel="prefetch" href="/EXPA/assets/js/22.054846e0.js"><link rel="prefetch" href="/EXPA/assets/js/23.cad60365.js"><link rel="prefetch" href="/EXPA/assets/js/24.5a69a079.js"><link rel="prefetch" href="/EXPA/assets/js/25.db660692.js"><link rel="prefetch" href="/EXPA/assets/js/26.86c4562d.js"><link rel="prefetch" href="/EXPA/assets/js/27.0213b95f.js"><link rel="prefetch" href="/EXPA/assets/js/28.c6e4932d.js"><link rel="prefetch" href="/EXPA/assets/js/29.329a3f25.js"><link rel="prefetch" href="/EXPA/assets/js/3.abc61efd.js"><link rel="prefetch" href="/EXPA/assets/js/30.ea3d9f0e.js"><link rel="prefetch" href="/EXPA/assets/js/31.9b4c2136.js"><link rel="prefetch" href="/EXPA/assets/js/32.50301f34.js"><link rel="prefetch" href="/EXPA/assets/js/33.5f56b756.js"><link rel="prefetch" href="/EXPA/assets/js/34.50a4a7a0.js"><link rel="prefetch" href="/EXPA/assets/js/35.c33dc6dd.js"><link rel="prefetch" href="/EXPA/assets/js/36.f3883300.js"><link rel="prefetch" href="/EXPA/assets/js/37.90696952.js"><link rel="prefetch" href="/EXPA/assets/js/38.124c0bf4.js"><link rel="prefetch" href="/EXPA/assets/js/39.bddd4cc2.js"><link rel="prefetch" href="/EXPA/assets/js/4.c1e8c424.js"><link rel="prefetch" href="/EXPA/assets/js/40.806b7ff0.js"><link rel="prefetch" href="/EXPA/assets/js/41.795259a1.js"><link rel="prefetch" href="/EXPA/assets/js/42.00e932d0.js"><link rel="prefetch" href="/EXPA/assets/js/43.6330f5ad.js"><link rel="prefetch" href="/EXPA/assets/js/44.86b92a07.js"><link rel="prefetch" href="/EXPA/assets/js/45.b779b678.js"><link rel="prefetch" href="/EXPA/assets/js/46.1a38be25.js"><link rel="prefetch" href="/EXPA/assets/js/5.e60b88a4.js"><link rel="prefetch" href="/EXPA/assets/js/6.7cb7d9ba.js"><link rel="prefetch" href="/EXPA/assets/js/7.5457ee2d.js"><link rel="prefetch" href="/EXPA/assets/js/8.e489dd05.js"><link rel="prefetch" href="/EXPA/assets/js/9.ef0c6acb.js">
+    <link rel="stylesheet" href="/EXPA/assets/css/0.styles.7fd1fbfe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/EXPA/" class="home-link router-link-active"><!----> <span class="site-name">Expa</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/EXPA/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Nikeweke/EXPA/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  To repository
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/EXPA/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Nikeweke/EXPA/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  To repository
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/EXPA/introduction.html" class="sidebar-link">Intro (links)</a></li><li><a href="/EXPA/starter-kit.html" class="sidebar-link">Starter Kit for programming</a></li><li><a href="/EXPA/technologies.html" class="sidebar-link">Technologies</a></li><li><a href="/EXPA/what-project-must-have.html" class="sidebar-link">Project at nowadays</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Frontend</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Mobile development</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Deploying</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Authentications</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Loggers</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Tests and CI/CD</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Clouds</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/EXPA/clouds/firebase-db.html" class="active sidebar-link">Firebase Realtime Database</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="firebase-realtime-database"><a href="#firebase-realtime-database" aria-hidden="true" class="header-anchor">#</a> Firebase Realtime Database</h1> <p></p><div class="table-of-contents"><ul><li><a href="#firebase-api">Firebase API</a></li><li><a href="#firebase-api-class">Firebase-API class</a></li><li><a href="#firebase-sdk-class">Firebase-SDK class</a></li></ul></div><p></p> <hr> <h3 id="firebase-api"><a href="#firebase-api" aria-hidden="true" class="header-anchor">#</a> Firebase API</h3> <p><strong><code>{GET}</code> - Get items</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Get whole collection</span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>.json
+
+<span class="token comment"># Get by key</span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>/<span class="token punctuation">[</span>key<span class="token punctuation">]</span>.json
+
+<span class="token comment"># Get by key and field in it</span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>/<span class="token punctuation">[</span>key<span class="token punctuation">]</span>/<span class="token punctuation">[</span>field<span class="token punctuation">]</span>.json
+</code></pre></div><p><strong><code>{POST}</code> - Create item</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Post some data </span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>.json
+</code></pre></div><p><strong><code>{DELETE}</code> - Delete item</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Post some data </span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>/<span class="token punctuation">[</span>key<span class="token punctuation">]</span>.json
+</code></pre></div><p><strong><code>{PUT}</code> - Update item</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Post data for update item</span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>/<span class="token punctuation">[</span>key<span class="token punctuation">]</span>.json
+
+<span class="token comment"># Post data for update item's field</span>
+https://<span class="token punctuation">[</span>database-name<span class="token punctuation">]</span>.firebaseio.com/<span class="token punctuation">[</span>collection-name<span class="token punctuation">]</span>/<span class="token punctuation">[</span>key<span class="token punctuation">]</span>/<span class="token punctuation">[</span>field<span class="token punctuation">]</span>.json
+</code></pre></div><h3 id="firebase-api-class"><a href="#firebase-api-class" aria-hidden="true" class="header-anchor">#</a> Firebase-API class</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">FirebaseCRUD</span> <span class="token punctuation">(</span><span class="token parameter">table</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>table <span class="token operator">=</span> table <span class="token operator">||</span> <span class="token string">''</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">FIREBASE_API</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>zorg<span class="token operator">-</span><span class="token number">007.</span>firebaseio<span class="token punctuation">.</span>com<span class="token operator">/</span>$<span class="token punctuation">{</span>id <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span>table <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> id <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">}</span><span class="token punctuation">.</span>json
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">FirebaseCRUD</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">request</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">let</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+    method<span class="token punctuation">:</span> method <span class="token operator">||</span> <span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token comment">// *GET, POST, PUT, DELETE, etc.</span>
+    body<span class="token punctuation">:</span> data <span class="token operator">?</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'Content-Type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 'Content-Type': 'application/x-www-form-urlencoded',</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span> 
+ <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token comment">// alert(response.headers.get('Content-Type')) // application/json charset=utf-8</span>
+    <span class="token comment">// alert(response.status) // 200</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span>alert<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">FirebaseCRUD</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">get</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">id <span class="token operator">=</span> <span class="token keyword">null</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">FIREBASE_API</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">FirebaseCRUD</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">create</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">FIREBASE_API</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// let data = {name: 'Fedor', surname: 'Alik'}</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">FirebaseCRUD</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">update</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> url  <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">FIREBASE_API</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token string">'PUT'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">FirebaseCRUD</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">delete</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> url  <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">FIREBASE_API</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token string">'DELETE'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="firebase-sdk-class"><a href="#firebase-sdk-class" aria-hidden="true" class="header-anchor">#</a> Firebase-SDK class</h3> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token comment">/**
+  * Connect to a firebase realtime database and get connection 
+  * @return {Object} database connection
+  */</span>
+ module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span><span class="token function-variable function">getDB</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> admin          <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'firebase-admin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> serviceAccount <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./path/to/key.json'</span><span class="token punctuation">)</span>
+  
+  admin<span class="token punctuation">.</span><span class="token function">initializeApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    credential<span class="token punctuation">:</span> admin<span class="token punctuation">.</span>credential<span class="token punctuation">.</span><span class="token function">cert</span><span class="token punctuation">(</span>serviceAccount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    databaseURL<span class="token punctuation">:</span> <span class="token string">&quot;https://__________.firebaseio.com&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  
+  <span class="token keyword">return</span> admin<span class="token punctuation">.</span><span class="token function">database</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token comment">/**
+ * FirebaseEntity - class for firebase realtime DB,
+ * that have CRUD functions that allow to work with some nested object in realtime db 
+ */</span>
+
+<span class="token comment">// constructor</span>
+<span class="token keyword">function</span> <span class="token function">FirebaseEntity</span> <span class="token punctuation">(</span>table <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> db<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>table    <span class="token operator">=</span> table
+  <span class="token keyword">this</span><span class="token punctuation">.</span>tableRef <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">ref</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Add item in some nested item
+ * @param {Object} data
+ * @return {Promise} 
+ */</span>
+<span class="token class-name">FirebaseEntity</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getItems</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> tableRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tableRef
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res<span class="token punctuation">,</span> rej</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    tableRef
+    <span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'value'</span><span class="token punctuation">,</span>
+     <span class="token punctuation">(</span><span class="token parameter">snapshot</span><span class="token punctuation">)</span>    <span class="token operator">=&gt;</span> <span class="token function">res</span><span class="token punctuation">(</span>snapshot<span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+     <span class="token punctuation">(</span><span class="token parameter">errorObject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;The read failed: &quot;</span> <span class="token operator">+</span> errorObject<span class="token punctuation">.</span>code<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Firebase возвращает записи в виде обьекта, где id это ключ, </span>
+    <span class="token comment">// надо вынять ключи и поставить их как id,</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token punctuation">:</span> key<span class="token punctuation">,</span> <span class="token operator">...</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Add item in some nested item(table)
+ * @param {Object} data
+ * @return {String} 
+ */</span>
+<span class="token class-name">FirebaseEntity</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">addItem</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> itemRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tableRef<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> itemRef<span class="token punctuation">.</span>key
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Remove item by id
+ * @param {String} id
+ */</span>
+<span class="token class-name">FirebaseEntity</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">deleteItem</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>tableRef<span class="token punctuation">.</span><span class="token function">child</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Update item by id
+ * @param {String} id
+ * @param {Object} data
+ */</span>
+<span class="token class-name">FirebaseEntity</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">updateItem</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'No id provided'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">this</span><span class="token punctuation">.</span>tableRef<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>id<span class="token punctuation">]</span><span class="token punctuation">:</span> data
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/EXPA/tests-cicd/ci-cd.html" class="prev">
+          CI/CD
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/EXPA/assets/js/app.8ff0aae1.js" defer></script><script src="/EXPA/assets/js/14.122b996c.js" defer></script>
+  </body>
+</html>
