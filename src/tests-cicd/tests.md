@@ -46,6 +46,27 @@
 * **Возможность лучше разобраться в коде**
 
 ### Пример - тестирование API expressjs
+Тесты должны находитсья в папке "test"
+
+```json
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "chai-http": "^4.2.1"
+  }
+}
+```
+
 ```js
 // index.spec.js
 //During the test the env variable is set to test
