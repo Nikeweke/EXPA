@@ -15,6 +15,7 @@ module.exports = {
       '/starter-kit.md',
       '/technologies.md',
       '/what-project-must-have.md',
+      '/ngrok.md',
       {
         title: 'Frontend',
         collapsable: true,
