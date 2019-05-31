@@ -99,6 +99,7 @@ module.exports = {
         collapsable: true,
         children: [
           '/clouds/firebase-db.md',
+          '/clouds/aws.md',
         ]
       },
     ]
