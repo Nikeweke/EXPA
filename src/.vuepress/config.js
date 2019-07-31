@@ -21,81 +21,37 @@ module.exports = {
       {
         title: 'Frontend',
         collapsable: true,
-        children: [
-          '/frontend/cdn-links.md',
-          '/frontend/css-resources.md',
-          '/frontend/gulp.md',
-          '/frontend/webpack.md',
-          '/frontend/sass.md',
-          '/frontend/css-tricks.md',
-          '/frontend/js-cases.md',
-          '/frontend/js-es678.md',
-          '/frontend/js-plugins.md',
-          '/frontend/jq-validate.md',
-          '/frontend/animated-bg.md',
-          '/frontend/angular-js.md',
-          '/frontend/react-js.md'
-        ]
+        children: require('../frontend/__index')
       },
       {
         title: 'Tools',
         collapsable: true,
-        children: [
-          '/tools/apidoc.md',
-          '/tools/git.md',
-          '/tools/mermaid.md',
-        ]
+        children: require('../tools/__index')
       },
       {
         title: 'Mobile development',
         collapsable: true,
-        children: [
-          '/mobile-dev/ionic.md',
-          '/mobile-dev/react-native.md'
-        ]
+        children: require('../mobile-dev/__index')
       },
       {
         title: 'Deploying',
         collapsable: true,
-        children: [
-          '/deploying/heroku.md',
-          '/deploying/unix.md',
-          '/deploying/vps.md',
-          '/deploying/namecheap-domain-to-vps.md',
-          '/deploying/mailgun-mail/intro.md',
-          '/deploying/mailgun-mail/api.md',
-          '/deploying/mailgun-mail/smtp.md',
-          '/deploying/docker.md'
-        ]
+        children: require('../deploying/__index')
       },
       {
         title: 'Authentications',
         collapsable: true,
-        children: [
-          '/authes/intro.md',
-          '/authes/forms-jwt.md',
-          '/authes/oauth.md',
-          '/authes/oauth-google.md',
-          '/authes/oauth-github.md',
-          '/authes/auth-services.md',
-        ]
+        children: require('../authes/__index')
       },
       {
         title: 'Tests and CI/CD',
         collapsable: true,
-        children: [
-          '/tests-cicd/intro.md',
-          '/tests-cicd/tests.md',
-          '/tests-cicd/ci-cd.md',
-        ]
+        children: require('../tests-cicd/__index')
       },
       {
         title: 'Clouds',
         collapsable: true,
-        children: [
-          '/clouds/firebase-db.md',
-          '/clouds/aws.md',
-        ]
+        children: require('../clouds/__index')
       },
     ]
   }
