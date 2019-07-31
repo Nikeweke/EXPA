@@ -1,4 +1,4 @@
-# Intro
+# Loggers
 
 [About logger frameworks](https://www.coreycleary.me/should-you-use-a-logging-framework-or-console-log-in-node/)
 

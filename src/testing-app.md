@@ -1,5 +1,15 @@
-# Ngrok - show app from your PC
+# Testing app localy and public
 
+
+### [Local web server](https://www.npmjs.com/package/local-web-server)
+Start server that can be reached in internet
+```
+npm i local-web-server
+```
+
+
+### Ngrok 
+Make tunnel for your app on some port
 
 ```sh
 npm i ngrok -D

@@ -15,7 +15,9 @@ module.exports = {
       '/starter-kit.md',
       '/technologies.md',
       '/what-project-must-have.md',
-      '/ngrok.md',
+      '/testing-app.md',
+      '/loggers.md',
+
       {
         title: 'Frontend',
         collapsable: true,
@@ -76,13 +78,6 @@ module.exports = {
           '/authes/oauth-google.md',
           '/authes/oauth-github.md',
           '/authes/auth-services.md',
-        ]
-      },
-      {
-        title: 'Loggers',
-        collapsable: true,
-        children: [
-          '/loggers/intro.md',
         ]
       },
       {
