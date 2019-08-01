@@ -5,7 +5,7 @@
 ---
 
 ### Top commands
-* `git cherrypick` - делает коммит который вовращает противоположное состояние выбранном коммиту
+* `git revert` - делает коммит который вовращает противоположное состояние выбранном коммиту
 * `git cherrypick` - применяет отдельный коммит на выбранную ветку
 * `git bisect` - помогает найти коммит который сломал продукт, деля коммиты постепенно и применяя их
 * `git add -A` - добавить все файлы для отслеживания
@@ -25,6 +25,25 @@ git config --global user.name "nikeweke"
 git config --global user.email jxammet@gmail.com
 ```
 
+
+### `git bisect`
+```bash
+# начинаем бинарный поиск
+git bisect start
+
+# говорим что текущий состояние не рабочие
+git bisect bad
+
+# говорим какое состояние было рабочее (надо хеш коммита)
+git bisect good <commit-hash>
+
+# начинаем проверять и отмечаем "bad" или "good" коммит сейчас
+
+# закончить и вернуться в начальное состояние 
+git bisect reset
+```
+
+
 ## Config 
 показать настройки
 ```
@@ -41,7 +60,7 @@ logs/
 docs/*.txt
 ```
 
-## Add
+### `git add`
 ```
 // Добавить все файлы проекта под контроль Git
 git add .
@@ -56,7 +75,7 @@ git add .
 git rm --cached filename
 ```
 
-## Status 
+### `git status` 
 ```bash
 git status
 # показ файлов в папке
@@ -65,7 +84,7 @@ git status --untracked-files=all
 git status --untracked-files=no
 ```
 
-## Commit
+### `git commit`
 ```
 // Закомитить файлы которы были изменены и проиндексированы
 git commit -m"commit"
@@ -88,13 +107,13 @@ git config --global core.editor "'C:\Program Files\Notepad++\notepad++.exe' - mu
    editor = 'C:\\Program Files\\Notepad++\\notepad++.exe' - multiInst -notabbar -nosession -noPlugin
 ```
 
-## Checkout
+### `git checkout`
 ```
 // Получить файл из репозитория или откатить локальный файл до файла как на репозиторие
 git checkout -- filename
 ```
 
-## Remote
+### `git remote`
 ```
 // Добавить удаленный репозиторий для проекта(origin - это название)
 git remote add origin https://github.com/Nikeweke/Portal_News.git
@@ -107,7 +126,7 @@ git remote
 git remote -v
 ```
 
-## Push
+### `git push`
 ```
 // Закачать файлы на GitHGub в репозиторий
 git push -u origin master // один раз так, так как здесь ключ: -u
@@ -115,7 +134,7 @@ git push                 // второй раз так можно
 ```
 
 
-## Log
+### `git log`
 ```
 // Лог действией ( Если много записей то чтобы потом выйти если знак ":" - Q)
 git log
@@ -133,7 +152,7 @@ git log -p -2
 ```
 
 
-## Branches
+### `git branch`
 ```
 // Создание новой ветки - trunk и сразу переключються на неё
 git checkout -b trunk
@@ -147,7 +166,7 @@ git branch -v
 git checkout name_branch
 ```
 
-## Merge
+### `git merge`
 ```
 // Например мы находимся на ветке trunk - и мержим себе ветку master
 git merge master
@@ -179,24 +198,4 @@ git status
 git branch -v
 ```
 
-
-
-## Последовательность работы 
-1. пописал в файлах херни
-2. проверил что там и где понаписовал: `git status`
-3. проиндексировал херню: `git add .`
-4. делаем коммит  `git commit -m "commit"` - (`"commit"` - это просто комментарий будет виден на сайте в истории)
-5. делаем репозиторий на Github без Readme.md, и пишем `git remote add name https:// ... .git`
-5. `git push` (или `git push -u origin master` - один раз)
-
-
-### pusher.bat
-```
-cd D:\path\to\project
-git init
-git remote add origin https://Nickname:password@bitbucket.org/Nickname/project.git
-git add .
-git commit -m "new coomit"
-git push -u origin master
-```
 
