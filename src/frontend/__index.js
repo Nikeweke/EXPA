@@ -1,4 +1,6 @@
 module.exports = [
+  '/frontend/pwa.md',
+  '/frontend/service-worker.md',
   '/frontend/web-comps.md',
   '/frontend/cdn-links.md',
   '/frontend/css-resources.md',
