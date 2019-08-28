@@ -11,12 +11,11 @@ module.exports = {
       { text: 'To repository', link: 'https://github.com/Nikeweke/EXPA/'},
     ],
     sidebar: [
-      '/introduction.md',
-      '/starter-kit.md',
-      '/technologies.md',
-      '/what-project-must-have.md',
-      '/testing-app.md',
-      '/loggers.md',
+      {
+        title: 'Basic',
+        collapsable: true,
+        children: require('../basic/__index')
+      },
 
       {
         title: 'Frontend',
