@@ -52,6 +52,11 @@ module.exports = {
         collapsable: true,
         children: require('../clouds/__index')
       },
+      {
+        title: 'Problems and Solutions',
+        collapsable: true,
+        children: require('../problems/__index')
+      },
     ]
   }
 }
