@@ -1,8 +1,6 @@
 const dirName = '/frontend/'
 
 const files = [
-  'pwa.md',
-  'service-worker.md',
   'web-comps.md',
   'cdn-links.md',
   'css-resources.md',
