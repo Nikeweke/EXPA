@@ -1,4 +1,8 @@
-module.exports = [
-  '/mobile-dev/ionic.md',
-  '/mobile-dev/react-native.md'
+const dirName = '/mobile-dev/'
+const files = [
+  'pwa',
+  'ionic',
+  'react-native',
 ]
+
+module.exports = files.map((item) => dirName + item + '.md')

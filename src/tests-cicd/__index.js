@@ -1,6 +1,9 @@
-module.exports = [
-  '/tests-cicd/intro.md',
-  '/tests-cicd/tests.md',
-  '/tests-cicd/ci-cd.md',
+const dirName = '/tests-cicd/'
+
+const files = [
+  'intro.md',
+  'tests.md',
+  'ci-cd.md',
 ]
 
+module.exports = files.map((item) => dirName + item)

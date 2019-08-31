@@ -1,18 +1,22 @@
-module.exports = [
-  '/frontend/pwa.md',
-  '/frontend/service-worker.md',
-  '/frontend/web-comps.md',
-  '/frontend/cdn-links.md',
-  '/frontend/css-resources.md',
-  '/frontend/gulp.md',
-  '/frontend/webpack.md',
-  '/frontend/sass.md',
-  '/frontend/css-tricks.md',
-  '/frontend/js-cases.md',
-  '/frontend/js-es678.md',
-  '/frontend/js-plugins.md',
-  '/frontend/jq-validate.md',
-  '/frontend/animated-bg.md',
-  '/frontend/angular-js.md',
-  '/frontend/react-js.md'
+const dirName = '/frontend/'
+
+const files = [
+  'pwa.md',
+  'service-worker.md',
+  'web-comps.md',
+  'cdn-links.md',
+  'css-resources.md',
+  'gulp.md',
+  'webpack.md',
+  'sass.md',
+  'css-tricks.md',
+  'js-cases.md',
+  'js-es678.md',
+  'js-plugins.md',
+  'jq-validate.md',
+  'animated-bg.md',
+  'angular-js.md',
+  'react-js.md'
 ]
+
+module.exports = files.map((item) => dirName + item)

@@ -1,8 +1,11 @@
-module.exports = [
-  '/authes/intro.md',
-  '/authes/forms-jwt.md',
-  '/authes/oauth.md',
-  '/authes/oauth-google.md',
-  '/authes/oauth-github.md',
-  '/authes/auth-services.md',
+const dirName = '/authes/'
+const files = [
+  'intro.md',
+  'forms-jwt.md',
+  'oauth.md',
+  'oauth-google.md',
+  'oauth-github.md',
+  'auth-services.md',
 ]
+
+module.exports = files.map((item) => dirName + item)
