@@ -40,11 +40,13 @@ function binarySearch(arr, x, iteration) {
   const middleValue = arr[arrHalf]
   let slicedArr
 
-  // take right part
+  
   if (x === middleValue) {
 		console.log('Found it - ', x, iteration)
     return 
 	}
+	
+	// take right part
   if (x > middleValue) {
   	slicedArr = arr.slice(arrHalf, arrLen)
     
