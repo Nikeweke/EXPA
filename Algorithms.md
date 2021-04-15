@@ -34,7 +34,7 @@ const x = 110;
 binarySearch(arr, x, true)
 
 function binarySearch(arr, x, iteration) {
-	iteration++
+	
 	const arrLen = arr.length
   const arrHalf = Math.floor(arrLen/2)
   const middleValue = arr[arrHalf]
